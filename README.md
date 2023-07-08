@@ -1,4 +1,6 @@
-# kickSignAway説明書
+# Mailana説明書
+
+8July2023 下奥
 
 24 May 2023 下奥
 
