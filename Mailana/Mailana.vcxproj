@@ -151,43 +151,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Readme.md" />
+    <None Include="..\Updates.md" />
     <None Include="ExceptionList.dat" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\Samples\issues\20000000011.txt" />
-    <Text Include="..\Samples\issues\20000000019.txt" />
-    <Text Include="..\Samples\issues\20000000035.txt" />
-    <Text Include="..\Samples\issues\20000000044.txt" />
-    <Text Include="..\Samples\issues\20000000062.txt" />
-    <Text Include="..\Samples\issues\20000000074.txt" />
-    <Text Include="..\Samples\issues\20000000076.txt" />
-    <Text Include="..\Samples\issues\20000000079.txt" />
-    <Text Include="..\Samples\issues\20000000080.txt" />
-    <Text Include="..\Samples\issues\20000000091.txt" />
-    <Text Include="..\Samples\issues\20000000132.txt" />
-    <Text Include="..\Samples\issues\20000000164.txt" />
-    <Text Include="..\Samples\issues\20000000190.txt" />
-    <Text Include="..\Samples\issues\20000000210.txt" />
-    <Text Include="..\Samples\issues\20000000265.txt" />
-    <Text Include="..\Samples\issues\20000000267.txt" />
-    <Text Include="..\Samples\issues\20000000271.txt" />
-    <Text Include="..\Samples\issues\20000000339.txt" />
-    <Text Include="..\Samples\issues\C.txt" />
-    <Text Include="..\Samples\issues\C001.txt" />
-    <Text Include="..\Samples\issues\C002.txt" />
-    <Text Include="..\Samples\issues\C003.txt" />
-    <Text Include="..\Samples\issues\C004.txt" />
-    <Text Include="..\Samples\issues\C005.txt" />
-    <Text Include="..\Samples\issues\C006.txt" />
-    <Text Include="..\Samples\issues\C007.txt" />
-    <Text Include="..\Samples\issues\C008.txt" />
-    <Text Include="..\Samples\issues\C009.txt" />
-    <Text Include="..\Samples\issues\C010.txt" />
-    <Text Include="..\Samples\issues\C011.txt" />
-    <Text Include="..\Samples\issues\C019.txt" />
-    <Text Include="..\Samples\issues\C035.txt" />
-    <Text Include="..\Samples\issues\C044.txt" />
-    <Text Include="..\Samples\issues\C054.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

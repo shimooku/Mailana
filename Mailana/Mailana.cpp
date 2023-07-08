@@ -170,7 +170,6 @@ bool isMail(char* input)
 }
 
 static const vector<wstring> keyWords = {
-#if true
     L"PHONE",
     L"TEL",
     L"ＴＥＬ",
@@ -186,6 +185,7 @@ static const vector<wstring> keyWords = {
     L"HTTPS",
     L"電話",
     L"携帯",
+    L"内線",
     L"株式会社",
     L"事業所",
     L"事務所",
@@ -196,15 +196,17 @@ static const vector<wstring> keyWords = {
     L"社団法人",
     L"弁護士",
     L"〒",
-#endif
     L".*丁目",
     L".*[0-9]{1,5}番",
     L".*[0-9]{1,5}号",
-#if true
     L".{2,3}[都道府県]",
     L".{1,5}[市郡区町村]",
+    L".*ビル",
+    L"[0-9]{1,2}階",
+    L"[0-9]{1,2}F",
     L".*[0-9]{1,5}-[0-9]{1,5}",
     L".*[０-９]{1,5}－[０-９]{1,5}",
+    L".*[０-９]{2,4}（[０-９]{2,4}）[０-９]{4}",
     L"[^0123456789-]*[0-9]{2}-[0-9]{4}-[0-9]{4}[^0123456789-]*$", // 電話番号 xx-xxxx-xxxx
     L"[^0123456789-]*[0-9]{3}-[0-9]{3}-[0-9]{4}[^0123456789-]*$", // 電話番号 xxx-xxx-xxxx
     L"[^0123456789-]*[0-9]{4}-[0-9]{2}-[0-9]{4}[^0123456789-]*$", // 電話番号 xxxx-xx-xxxx
@@ -212,7 +214,6 @@ static const vector<wstring> keyWords = {
     L"[^0123456789-]*0120-[0-9]{3}-[0-9]{3}[^0-9][^0123456789-]*$", // 電話番号 0120-xxx-xxx
     L"[0-9]{3}-[0-9]{4}[^0123456789-]*$", // 郵便番号 xxx-xxxx
     L"[０-９]{3}－[０-９]{4}[^0123456789-]*$", // 郵便番号 xxx-xxxx
-#endif
 };
 
 // 指定領域の行のSignatureっぽさを評価（スコア付け）して返す
@@ -232,7 +233,7 @@ tuple<int, int> analyzeLines
     for (int i = startLine; i <= endLine; i++)
     {
         wstring* lineText = &section->lines[i].lineText;
-        vector<wstring> words = split(lineText->c_str(), L" 　+.()[]$^*?\\\n");
+        vector<wstring> words = split(lineText->c_str(), L" 　+.{}()[]$^*?\\\n");
         int lineScore = 0;
 
         bool bFoundSender = false;
@@ -241,28 +242,28 @@ tuple<int, int> analyzeLines
         {
             if (word.size() == 0)
                 continue;
-#if false
-#if true
+
             int wordLength = word.size();
-            if (wordLength < 4)
+            if (wordLength <= 2)
             {
+                bool bAsciiText = true;
                 const wchar_t* text = word.c_str();
                 for (int i = 0; i < word.size(); i++)
                 {
                     if (text[i] & 0xff00)
+                    {
+                        bAsciiText = false;
                         break;
+                    }
 
                 }
-                continue;
+                if (bAsciiText)
+                    continue;
             }
-#else
-            if (!(*text & 0xff00) && word.size() < 4)
-                continue;
-#endif
-#endif
+
             int score = 0;
 
-            // 差出人 email？
+            // 差出人 email
             if (bFoundSender == false && section->sender.email.size() && word.find(section->sender.email) != wstring::npos)
             {
 #define SCORE_FOR_SENDER 10
@@ -275,18 +276,11 @@ tuple<int, int> analyzeLines
                 bFoundSender = true;
             }
 
-            // 差出人 displayName？
-#if true
+            // 差出人 displayName
             std::wsmatch mt;
             if (bFoundSender == false && section->sender.name.size()
-                // 任意の文字列なので正規表現にかかわる制御文字を含んでいる場合がある
                 && (regex_search(word, mt, wregex(section->sender.name, regex::icase))
                 || regex_search(section->sender.name, mt, wregex(word, regex::icase))))
-#else
-            if (bFoundSender == false && section->sender.name.size()
-                && (word.find(section->sender.name) != wstring::npos
-                || section->sender.name.find(word) != wstring::npos))
-#endif
             {
                 score += SCORE_FOR_SENDER;
                 section->lines[i].scoreFrom += SCORE_FOR_SENDER;
@@ -297,7 +291,7 @@ tuple<int, int> analyzeLines
                 bFoundSender = true;
             }
 
-            // 差出人 hint？
+            // 差出人 hint
             //if (bFoundSender == false)
             {
                 for (auto hint : section->sender.hints)
