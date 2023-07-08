@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Document">
+      <UniqueIdentifier>{c3ab5d22-1522-4684-815a-e1e74809c425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\samples">
+      <UniqueIdentifier>{be0ea136-bc09-4982-b44d-91b47add8e01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Mailana.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SignMarkDetector.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptedMarks.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="LineInfo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Players.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LineInfo.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="MailAna.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SignMarkDetector.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptedMarks.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Players.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExceptionList.dat">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="..\Readme.md">
+      <Filter>Document</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Samples\issues\20000000091.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000132.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000164.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000190.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000210.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000265.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000267.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000271.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000339.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C001.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C002.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C003.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C004.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C005.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C006.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C007.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C008.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C009.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C010.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C011.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C019.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C035.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C044.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\C054.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000011.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000019.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000035.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000044.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000062.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000074.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000076.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000079.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+    <Text Include="..\Samples\issues\20000000080.txt">
+      <Filter>リソース ファイル\samples</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
