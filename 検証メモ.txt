@@ -10,3 +10,10 @@ BranchOnMyGit#4を作ってみました。
 
 
 BranchOnMyGit#4に更に変更を加えると。
+
+
+
+
+
+
+Branch#4を更に編集することでわかってくるのは？
