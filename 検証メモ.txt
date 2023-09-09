@@ -10,3 +10,8 @@ BranchOnMyGit#4を作ってみました。
 
 
 BranchOnMyGit#4に更に変更を加えると。
+
+
+更にBranchOnMyGit#4に変更を加えると？ https://yttm-work.jp/git/git_0010.html ここにマークの意味が書いてあるけど。
+
+Branch#5ってやつを作ってみた。
